@@ -17,7 +17,7 @@ const Store = () => {
              </div>
              <div className='h-1 mt-10 mb-4 w-full bg-black'/>
              <div className='grid grid-cols-3   items-start gap-1 '>
-               <div className=' h-full  col-span-1'>
+               {/* <div className=' h-full  col-span-1'>
                 <img className=' w-full ' src={img1} alt="" />
                </div>
                <div className='flex col-span-2 max-h-[130px] h-[120px] flex-col justify-between'>
@@ -31,7 +31,7 @@ const Store = () => {
                        </div>
                        <button className='text-[12px] mr-4'>Remove</button>
                  </div>
-               </div>
+               </div> */}
              </div>
        </div>
     </div>

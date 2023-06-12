@@ -4,6 +4,7 @@
 
 body{
     font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(245, 245, 245);
 }
 .shaddow {
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
