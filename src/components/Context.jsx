@@ -9,8 +9,12 @@ const WrapContext = ({children})=>{
     const [count,setCount] = useState(0)
     const [element,setElement] = useState(items)
     const [selectitem,setSelectitem] = useState()
+    const [addtocart,setAddtocart] = useState()
     const location = useLocation()
     const url = location.pathname
+    const AddItem = ()=>{
+        setAddtocart(selectitem)
+    }
     useEffect(()=>{
          const selectelement = element.filter(elem=>elem.url==url)
          setSelectitem(selectelement[0])
@@ -25,7 +29,7 @@ const WrapContext = ({children})=>{
         }
     }
     return(
-        <CartContext.Provider value={{isopen,OpenClose,setIsopen,ref,count,CloseStore,selectitem}}>
+        <CartContext.Provider value={{isopen,OpenClose,setIsopen,ref,count,CloseStore,selectitem,AddItem,addtocart}}>
             {children}
         </CartContext.Provider>
     )

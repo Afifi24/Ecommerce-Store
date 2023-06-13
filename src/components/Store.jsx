@@ -3,7 +3,7 @@ import { CartContext } from './Context'
 import {GrFormClose} from 'react-icons/gr'
 import img1 from '../assets/img3.jpg'
 const Store = () => {
-  const {OpenClose,isopen,setIsopen,CloseStore,ref} = useContext(CartContext)
+  const {OpenClose,isopen,setIsopen,CloseStore,ref,selectitem,AddItem,addtocart} = useContext(CartContext)
   return (
     <div>
      {
@@ -17,11 +17,11 @@ const Store = () => {
              </div>
              <div className='h-1 mt-10 mb-4 w-full bg-black'/>
              <div className='grid grid-cols-3   items-start gap-1 '>
-               {/* <div className=' h-full  col-span-1'>
-                <img className=' w-full ' src={img1} alt="" />
+               <div className=' h-full  col-span-1'>
+                <img className=' w-full ' src={addtocart?.img} alt="" />
                </div>
                <div className='flex col-span-2 max-h-[130px] h-[120px] flex-col justify-between'>
-                <h2 className='font-bold'>High Rise Boyfriends Jean</h2>
+                <h2 className='font-bold'>{addtocart?.title}</h2>
                  <h3>$45.99</h3>
                  <div className='flex items-end justify-between'>
                        <div className='flex items-center  bg-gray-200 w-fit'>
@@ -31,7 +31,7 @@ const Store = () => {
                        </div>
                        <button className='text-[12px] mr-4'>Remove</button>
                  </div>
-               </div> */}
+               </div>
              </div>
        </div>
     </div>
