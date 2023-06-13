@@ -12,7 +12,7 @@ const CartDetails = () => {
             <h2 className='font-bold text-xl'>{selectitem?.title}</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum fugiat amet expedita adipisci optio eum totam voluptatibus unde temporibus!</p>
             <h4 className='font-bold text-xl'>${selectitem?.price}</h4>
-            <button onClick={AddItem} className='uppercase px-4 rounded-full w-full sm:w-fit py-3 bg-black text-white hover:text-black hover:bg-transparent border border-transparent hover:border-black duration-200 font-bold mt-10 '>Add to cart</button>
+            <button onClick={()=>AddItem(selectitem)} className='uppercase px-4 rounded-full w-full sm:w-fit py-3 bg-black text-white hover:text-black hover:bg-transparent border border-transparent hover:border-black duration-200 font-bold mt-10 '>Add to cart</button>
         </div>
     </div>
   )

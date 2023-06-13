@@ -14,6 +14,7 @@ import img9 from './assets/img/watch.jpg'
       price: 25,
       img:img4,
       url:'/cartdetail/pavion-shirt',
+      amount:1,
     },
     {
       id:2,
@@ -21,6 +22,8 @@ import img9 from './assets/img/watch.jpg'
       price: 79,
       img:img6,
       url:'/cartdetail/Houded-denim-jacket',
+      amount:1,
+
     },
     {
       id:3,
@@ -28,6 +31,8 @@ import img9 from './assets/img/watch.jpg'
       price: 19,
       img:img1,
       url:'/cartdetail/Booket-Hat',
+      amount:1,
+
     },
     {
       id:4,
@@ -35,6 +40,8 @@ import img9 from './assets/img/watch.jpg'
       price: 45,
       img:img2,
       url:'/cartdetail/Cool-Black-shoes',
+      amount:1,
+
     },
     {
       id:5,
@@ -42,6 +49,8 @@ import img9 from './assets/img/watch.jpg'
       price: 33,
       img:img3,
       url:'/cartdetail/Jean',
+      amount:1,
+
     },
     { 
       id:6,
@@ -49,6 +58,8 @@ import img9 from './assets/img/watch.jpg'
       price: 17,
       img:img5,
       url:'/cartdetail/Nice-Black-glasses',
+      amount:1,
+
     },
     { 
       id:7,
@@ -56,6 +67,8 @@ import img9 from './assets/img/watch.jpg'
       price: 300,
       img:img9,
       url:'/cartdetail/Times-watch',
+      amount:1,
+
     },
     { 
       id:8,
@@ -63,5 +76,7 @@ import img9 from './assets/img/watch.jpg'
       price: 7,
       img:img7,
       url:'/cartdetail/Bracelet',
+      amount:1,
+
     },
 ]

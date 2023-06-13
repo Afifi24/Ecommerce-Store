@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from './Context'
 const Header = () => {
   const {isopen,OpenClose,count} = useContext(CartContext)
-  console.log(isopen)
+
   return (
     <div className='bg-black fixed top-0 w-full py-4'>
       <div className=' text-white flex items-center justify-between w-[90%] m-auto '>
