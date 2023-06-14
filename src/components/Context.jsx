@@ -10,7 +10,6 @@ const WrapContext = ({children})=>{
     const [element,setElement] = useState(items)
     const [selectitem,setSelectitem] = useState()
     const [addtocart,setAddtocart] = useState([])
-    // const [amount,setAmount] = useState()
     const location = useLocation()
     const url = location.pathname
     const ref = useRef()

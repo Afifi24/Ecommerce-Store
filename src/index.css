@@ -9,3 +9,10 @@ body{
 .shaddow {
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
 }
+
+*{
+    
+        scrollbar-width: thin; /* Set the width of the scrollbar */
+        scrollbar-color: #888 #f1f1f1; /* Set the colors for the thumb and track */
+      
+}
