@@ -1,9 +1,11 @@
 import React,{createContext,useState,useRef,useEffect} from "react";
 import {items} from '../data'
 import { useLocation } from "react-router-dom";
+import swal from "sweetalert";
 export  const CartContext = createContext()
 
 const WrapContext = ({children})=>{
+    
 
     const [isopen,setIsopen] = useState(false)
     const [count,setCount] = useState(0)
@@ -18,9 +20,21 @@ const WrapContext = ({children})=>{
         const product = addtocart.find(elem=>elem.id===item.id)
          if(product){
            product.amount += 1
+           swal({
+            title: "Good job!",
+            text: "Your product has been  updated!",
+            icon: "success",
+            button: "ok",
+          });
            setAddtocart([...addtocart])
          }else{
             item.amount=1
+            swal({
+                title: "Good job!",
+                text: "Your product has been  added!",
+                icon: "success",
+                button: "ok",
+              });
            setAddtocart([...addtocart,item])
 
            setCount(count+1)
@@ -33,6 +47,12 @@ const WrapContext = ({children})=>{
     },[url])
     const Delete = (item)=>{
         const Filterdelete = addtocart.filter(filt=>filt.id!==item.id)
+        swal({
+            title: "Good job!",
+            text: "Your product has been  deleted!",
+            icon: "success",
+            button: "ok",
+          });
         setAddtocart(Filterdelete)
         setCount(count-1)
     }
@@ -53,6 +73,12 @@ const WrapContext = ({children})=>{
        setAddtocart([...addtocart])
        if(item.amount===0){
           const hide = addtocart.filter(hid=>hid.id!==item.id)
+          swal({
+            title: "Good job!",
+            text: "Your product has been  deleted!",
+            icon: "success",
+            button: "ok",
+          });
           setAddtocart(hide)
           setCount(count - 1)
        }

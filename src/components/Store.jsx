@@ -1,10 +1,17 @@
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
 import { CartContext } from './Context'
 import {GrFormClose} from 'react-icons/gr'
 import img1 from '../assets/img3.jpg'
 import {MdDelete} from 'react-icons/md'
 const Store = () => {
   const {OpenClose,isopen,setIsopen,CloseStore,ref,selectitem,AddItem,addtocart,Delete,count,Addamount,Removeamount} = useContext(CartContext)
+  useEffect(()=>{
+    if(isopen===true){
+      document.body.style.overflow= 'hidden'
+    }else{
+      document.body.style.overflow= 'auto'
+    }
+  },[isopen])
   return (
     <div>
      {
@@ -27,7 +34,7 @@ const Store = () => {
               </div>
               <div className='flex w-full  md:col-span-3  flex-col md:gap-3  gap-1 '>
                <h2 className='font-semibold text-sm md:text-lg '>{item?.title}</h2>
-                <h3 className='font-bold text-sm md:text-lg '>${item.price}</h3>
+                <h3 className='font-bold text-sm md:text-lg '>${item.price*item.amount}</h3>
                 <div className='flex w-full  items-end justify-between'>
                       <div className='flex items-center  bg-gray-200 w-fit'>
                        <button onClick={()=>Removeamount(item)} className='px-3  duration-200 hover:bg-gray-300'>-</button>

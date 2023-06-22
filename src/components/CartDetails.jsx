@@ -1,12 +1,12 @@
-import React,{useContext} from 'react'
-import img1 from '../assets/img1.jpg'
+import React,{useContext,useEffect} from 'react'
 import {CartContext} from '../components/Context'
 const CartDetails = () => {
-  const {selectitem,AddItem} = useContext(CartContext)
+  const {selectitem,AddItem,isopen} = useContext(CartContext)
+ 
   return (
-    <div className='w-[90%] mt-20 rounded-xl overflow-hidden h-[90vh] max-h-screen shaddow my-4 m-auto flex items-start flex-col md:flex-row gap-4 '>
-        <div className='flex-1 w-full h-full overflow-hidden'>
-            <img className='w-full h-full object-cover ' src={selectitem?.img} alt="" />
+    <div className='w-[90%] mt-20 rounded-xl overflow-hidden h-[70vh] max-h-screen shaddow my-4 m-auto flex items-start flex-col md:flex-row gap-4 '>
+        <div className='flex-1  w-full justify-start flex h-full overflow-hidden'>
+            <img className=' h-full w-full md:w-auto object-cover  ' src={selectitem?.img} alt="" />
         </div>
         <div className='flex-1 p-4 flex flex-col gap-4 '>
             <h2 className='font-bold text-xl'>{selectitem?.title}</h2>
